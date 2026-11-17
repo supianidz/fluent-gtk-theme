@@ -5,6 +5,12 @@ $asset-suffix: if($variant == 'dark', '-dark', '');
 $theme-asset-suffix: if($topbar == 'dark', if($variant == 'dark', '-dark', ''), '-light');
 
 //
+// Fonts
+//
+
+$font-family: Inter, Cantarell, Sans-Serif;
+
+//
 // Sizes
 //
 

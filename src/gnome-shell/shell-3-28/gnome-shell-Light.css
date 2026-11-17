@@ -7,6 +7,7 @@
 }
 
 stage {
+  font-family: Inter, Cantarell, Sans-Serif;
   font-size: 10.5pt;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.87);
@@ -1249,12 +1250,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button:hover {
   color: rgba(0, 0, 0, 0.75);
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(0, 0, 0, 0.07);
 }
 
 #panel .panel-button:active, #panel .panel-button:checked, #panel .panel-button:focus {
   color: rgba(0, 0, 0, 0.88);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.12);
 }
 
 #panel .panel-button:hover, #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
@@ -3718,7 +3719,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #dashtodockContainer.opaque #dash {
-  background-color: #f3f3f3;
+  background-color: #fcfcfc;
 }
 
 #dashtodockContainer.transparent #dash {

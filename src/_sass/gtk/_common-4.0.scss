@@ -1,7 +1,10 @@
 /***************
  * Base States *
  ***************/
+window,
+dialog,
 .background {
+  font-family: $font-family;
   background-color: $background;
   color: $text;
 
@@ -1872,10 +1875,18 @@ searchbar > revealer > box {
   padding: 0;
   margin-left: $space-size / 2;
   margin-right: $space-size / 2;
-  @extend %circular-button;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
 
   > image {
-    border-radius: 100%;
+    min-height: $medium-size - 6px;
+    min-width: $medium-size - 6px;
+    border-radius: $circular-radius;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    transition: background-color $duration $ease-out, color $duration $ease-out;
   }
 }
 
@@ -2156,45 +2167,81 @@ headerbar {
     > button:not(.suggested-action):not(.destructive-action) {
       @if $titlebutton =="circular" {
         @extend %circular_titlebutton;
+
+        &, &:hover, &:active {
+          box-shadow: none;
+          background-color: transparent;
+        }
+
+        > image {
+          padding: 0;
+          margin: 0;
+          background-color: transparent;
+        }
+
+        &.minimize,
+        &.maximize {
+          &:hover > image {
+            background-color: $overlay-hover;
+            color: $titlebar-text;
+          }
+
+          &:active > image {
+            background-color: $overlay-active;
+            color: $titlebar-text;
+          }
+        }
+
+        &.close {
+          &:hover > image {
+            background-color: $red-300;
+            color: on($red-300);
+          }
+
+          &:active > image {
+            background-color: $red-600;
+            color: on($red-600);
+          }
+        }
       }
 
       @else {
         @extend %square_titlebutton;
-      }
 
-      &, &:hover, &:active {
-        box-shadow: none;
-        background-color: transparent;
-      }
-
-      > image {
-        padding: 0;
-        margin: 0;
-        background-color: transparent;
-      }
-
-      &.minimize,
-      &.maximize {
-        &:hover {
-          background-color: $overlay-hover;
-          color: $titlebar-text;
+        &, &:hover, &:active {
+          box-shadow: none;
+          background-color: transparent;
         }
 
-        &:active {
-          background-color: $overlay-active;
-          color: $titlebar-text;
-        }
-      }
-
-      &.close {
-        &:hover {
-          background-color: $red-300;
-          color: on($red-300);
+        > image {
+          padding: 0;
+          margin: 0;
+          background-color: transparent;
         }
 
-        &:active {
-          background-color: $red-600;
-          color: on($red-600);
+        &.minimize,
+        &.maximize {
+          &:hover {
+            background-color: $overlay-hover;
+            color: $titlebar-text;
+          }
+
+          &:active {
+            background-color: $overlay-active;
+            color: $titlebar-text;
+          }
+        }
+
+        &.close {
+          &:hover {
+            background-color: $red-300;
+            color: on($red-300);
+          }
+
+          &:active {
+            background-color: $red-600;
+            color: on($red-600);
+          }
         }
       }
 
@@ -2242,6 +2289,11 @@ headerbar {
           min-height: $small-size;
           min-width: $small-size;
           margin: 0 3px;
+
+          > image {
+            min-height: $small-size;
+            min-width: $small-size;
+          }
         }
 
         @else {

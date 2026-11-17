@@ -44,16 +44,25 @@
 /***************
  * Base States *
  ***************/
+window,
+dialog,
 .background {
+  font-family: Inter, Cantarell, Sans-Serif;
   background-color: #333333;
   color: white;
 }
 
+window.csd,
+dialog.csd,
 .background.csd {
   border-radius: 0 0 3px 3px;
 }
 
-.background.maximized, .background.solid-csd {
+window.maximized, window.solid-csd,
+dialog.maximized,
+dialog.solid-csd,
+.background.maximized,
+.background.solid-csd {
   border-radius: 0;
 }
 

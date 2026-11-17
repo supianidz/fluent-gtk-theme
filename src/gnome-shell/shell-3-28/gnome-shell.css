@@ -7,6 +7,7 @@
 }
 
 stage {
+  font-family: Inter, Cantarell, Sans-Serif;
   font-size: 10.5pt;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.87);

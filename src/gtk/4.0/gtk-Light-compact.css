@@ -1,16 +1,29 @@
 /***************
  * Base States *
  ***************/
+window,
+dialog,
 .background {
+  font-family: Inter, Cantarell, Sans-Serif;
   background-color: #F2F2F2;
   color: rgba(0, 0, 0, 0.87);
 }
 
+window.csd,
+dialog.csd,
 .background.csd {
   border-radius: 3px;
 }
 
-.background.maximized, .background.tiled, .background.fullscreen, .background.solid-csd {
+window.maximized, window.tiled, window.fullscreen, window.solid-csd,
+dialog.maximized,
+dialog.tiled,
+dialog.fullscreen,
+dialog.solid-csd,
+.background.maximized,
+.background.tiled,
+.background.fullscreen,
+.background.solid-csd {
   border-radius: 0;
 }
 
@@ -921,11 +934,11 @@ button.font > box > box > label, button.file > box > box > label {
   font-weight: bold;
 }
 
-menubutton.circular > button, filechooser #pathbarbox > stack > box > button, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action), button.close, button.circular {
+menubutton.circular > button, filechooser #pathbarbox > stack > box > button, button.close, button.circular {
   border-radius: 9999px;
 }
 
-menubutton.circular > button label, filechooser #pathbarbox > stack > box > button label, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action) label, button.close label, button.circular label {
+menubutton.circular > button label, filechooser #pathbarbox > stack > box > button label, button.close label, button.circular label {
   padding: 0;
 }
 
@@ -2149,10 +2162,19 @@ headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action
   padding: 0;
   margin-left: 2px;
   margin-right: 2px;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action) > image {
-  border-radius: 100%;
+  min-height: 22px;
+  min-width: 22px;
+  border-radius: 9999px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 headerbar {
@@ -2357,22 +2379,22 @@ headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action
   background-color: transparent;
 }
 
-headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:hover, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:hover {
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:hover > image, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:hover > image {
   background-color: alpha(currentColor, 0.08);
   color: rgba(0, 0, 0, 0.87);
 }
 
-headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:active, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:active {
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:active > image, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:active > image {
   background-color: alpha(currentColor, 0.16);
   color: rgba(0, 0, 0, 0.87);
 }
 
-headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:hover {
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:hover > image {
   background-color: #E57373;
   color: white;
 }
 
-headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:active {
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:active > image {
   background-color: #E53935;
   color: white;
 }
@@ -2403,6 +2425,12 @@ headerbar.default-decoration windowcontrols > menubutton {
   min-height: 20px;
   min-width: 20px;
   margin: 0 3px;
+}
+
+headerbar.default-decoration windowcontrols > button:not(.suggested-action):not(.destructive-action) > image,
+headerbar.default-decoration windowcontrols > menubutton > image {
+  min-height: 20px;
+  min-width: 20px;
 }
 
 window.devel headerbar.titlebar {

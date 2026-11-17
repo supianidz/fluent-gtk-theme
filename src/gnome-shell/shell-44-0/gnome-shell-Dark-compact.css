@@ -1,5 +1,6 @@
 /* This stylesheet is generated, DO NOT EDIT */
 stage {
+  font-family: Inter, Cantarell, Sans-Serif;
   font-size: 9.75pt;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
@@ -1856,8 +1857,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* OSD */
 .screenshot-ui-panel, .workspace-switcher-container, .switcher-list, .resize-popup, .osd-window {
   color: rgba(255, 255, 255, 0.85);
-  background-color: #222222;
-  border: none;
+  background-color: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.35);
   border-radius: 3px;
   padding: 8px;
@@ -1877,6 +1878,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .osd-window StIcon {
   icon-size: 32px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.osd-window StLabel {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .osd-window StLabel:ltr {
@@ -2032,7 +2038,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   transition-duration: 250ms;
   border: none;
   box-shadow: none;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5) !important;
   margin: 0;
   border-radius: 0;
   height: 30px;
@@ -2054,8 +2060,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel .panel-button {
   -natural-hpadding: 4px;
   -minimum-hpadding: 4px;
-  font-weight: normal;
-  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75) !important;
   transition-duration: 150ms;
   text-shadow: none;
   border-radius: 0;
@@ -2065,16 +2071,17 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button StLabel {
   padding: 0;
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 #panel .panel-button:hover {
-  color: rgba(255, 255, 255, 0.75);
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 #panel .panel-button:active, #panel .panel-button:checked, #panel .panel-button:focus {
-  color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 #panel .panel-button:hover, #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
@@ -2110,7 +2117,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .panel-button.clock-display .clock {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-weight: bold;
   transition-duration: 150ms;
   border: none;
   border-radius: 0;
@@ -2122,6 +2130,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button .system-status-icon {
   icon-size: 16px;
+  color: rgba(255, 255, 255, 0.75) !important;
   padding: 4px;
   margin: 0 2px;
 }
@@ -4446,6 +4455,21 @@ StWidget.focused .app-well-app-running-dot {
 
 .dashtopanelMainPanel .panel-button {
   color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+.dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:hover, .dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:focus {
+  background-color: rgba(238, 238, 236, 0.1) !important;
+}
+
+.dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:active, .dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:checked {
+  background-color: rgba(238, 238, 236, 0.18) !important;
 }
 
 .openweather-button, .openweather-button-action, .openweather-menu-button-container, .openweather-button-box {

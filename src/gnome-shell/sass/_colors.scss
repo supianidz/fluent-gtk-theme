@@ -104,6 +104,8 @@ $panel_bg:                            if($panel == 'light', #fcfcfc, #202020);
 $panel_bg_color:                      if($opacity == 'default', if($panel == 'light', rgba(white, 0.5), rgba(black, 0.5)), $panel_bg);
 $menu_bg_color:                       if($opacity == 'default', rgba($base_color, 0.97), $base_color);
 $system_bg_color:                     #222222;
+$osd_bg_color:                        if($variant == 'light', if($opacity == 'solid', #fcfcfc, rgba(white, 0.95)), if($opacity == 'solid', #222222, rgba(black, 0.95)));
+$osd_fg_color:                        if($variant == 'light', $fg_color, $inverse_fg_color);
 
 $link_color:                          $primary_color;
 $visited_link_color:                  if($variant == 'light', $purple-500, $purple-200);

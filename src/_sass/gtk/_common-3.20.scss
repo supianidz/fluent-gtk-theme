@@ -31,7 +31,10 @@
 /***************
  * Base States *
  ***************/
+window,
+dialog,
 .background {
+  font-family: $font-family;
   background-color: $background;
   color: $text;
 

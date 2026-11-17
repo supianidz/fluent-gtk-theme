@@ -1,5 +1,6 @@
 /* This stylesheet is generated, DO NOT EDIT */
 stage {
+  font-family: Inter, Cantarell, Sans-Serif;
   font-size: 9.75pt;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.87);
@@ -1912,9 +1913,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* OSD */
 .screenshot-ui-panel, .workspace-switcher-container, .switcher-list, .resize-popup, .osd-window {
-  color: rgba(255, 255, 255, 0.85);
-  background-color: #222222;
-  border: none;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.35);
   border-radius: 3px;
   padding: 8px;
@@ -1934,6 +1935,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .osd-window StIcon {
   icon-size: 32px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.osd-window StLabel {
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .osd-window StLabel:ltr {
@@ -1951,7 +1957,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .osd-window .level {
   height: 4px;
   -barlevel-height: 4px;
-  -barlevel-background-color: rgba(26, 115, 232, 0.3);
+  -barlevel-background-color: rgba(0, 0, 0, 0.12);
   -barlevel-active-background-color: #1A73E8;
   -barlevel-overdrive-color: #FF5252;
   -barlevel-overdrive-separator-width: 3px;
@@ -2089,7 +2095,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   transition-duration: 250ms;
   border: none;
   box-shadow: none;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5) !important;
   margin: 0;
   border-radius: 0;
   height: 30px;
@@ -2111,8 +2117,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel .panel-button {
   -natural-hpadding: 4px;
   -minimum-hpadding: 4px;
-  font-weight: normal;
-  color: rgba(0, 0, 0, 0.75);
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.75) !important;
   transition-duration: 150ms;
   text-shadow: none;
   border-radius: 0;
@@ -2122,16 +2128,17 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button StLabel {
   padding: 0;
+  color: rgba(0, 0, 0, 0.75) !important;
 }
 
 #panel .panel-button:hover {
-  color: rgba(0, 0, 0, 0.75);
-  background-color: rgba(255, 255, 255, 0.35);
+  color: rgba(0, 0, 0, 0.88) !important;
+  background-color: rgba(0, 0, 0, 0.07) !important;
 }
 
 #panel .panel-button:active, #panel .panel-button:checked, #panel .panel-button:focus {
-  color: rgba(0, 0, 0, 0.88);
-  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.88) !important;
+  background-color: rgba(0, 0, 0, 0.12) !important;
 }
 
 #panel .panel-button:hover, #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
@@ -2147,12 +2154,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button.clock-display:hover {
   color: rgba(0, 0, 0, 0.75);
-  background-color: rgba(255, 255, 255, 0.35) !important;
+  background-color: rgba(0, 0, 0, 0.07) !important;
 }
 
 #panel .panel-button.clock-display:active, #panel .panel-button.clock-display:checked, #panel .panel-button.clock-display:focus {
   color: rgba(0, 0, 0, 0.88);
-  background-color: rgba(255, 255, 255, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.12) !important;
 }
 
 #panel .panel-button.clock-display:active .clock, #panel .panel-button.clock-display:checked .clock, #panel .panel-button.clock-display:focus .clock {
@@ -2167,7 +2174,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .panel-button.clock-display .clock {
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.75) !important;
+  font-weight: bold;
   transition-duration: 150ms;
   border: none;
   border-radius: 0;
@@ -2179,6 +2187,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button .system-status-icon {
   icon-size: 16px;
+  color: rgba(0, 0, 0, 0.75) !important;
   padding: 4px;
   margin: 0 2px;
 }
@@ -4532,7 +4541,7 @@ StWidget.focused .app-grid-running-dot {
 #dashtodockContainer #dash .grid-search-result:selected .overview-icon,
 #dashtodockContainer #dash .search-provider-icon:selected .overview-icon,
 #dashtodockContainer #dash .list-search-result:selected .overview-icon {
-  background-color: rgba(255, 255, 255, 0.35) !important;
+  background-color: rgba(0, 0, 0, 0.07) !important;
   color: rgba(0, 0, 0, 0.88) !important;
 }
 
@@ -4545,7 +4554,7 @@ StWidget.focused .app-grid-running-dot {
 #dashtodockContainer #dash .grid-search-result:checked .overview-icon,
 #dashtodockContainer #dash .search-provider-icon:checked .overview-icon,
 #dashtodockContainer #dash .list-search-result:checked .overview-icon {
-  background-color: rgba(255, 255, 255, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.12) !important;
   color: rgba(0, 0, 0, 0.88) !important;
 }
 
@@ -4560,11 +4569,11 @@ StWidget.focused .app-grid-running-dot {
 }
 
 #dashtodockContainer StWidget.focused .overview-icon {
-  background-color: rgba(255, 255, 255, 0.35) !important;
+  background-color: rgba(0, 0, 0, 0.07) !important;
 }
 
 #dashtodockContainer StWidget.focused:hover .overview-icon {
-  background-color: rgba(255, 255, 255, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.12) !important;
 }
 
 #dashtodockContainer StWidget.focused .app-grid-running-dot {
@@ -4572,7 +4581,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 #dashtodockContainer.opaque #dash .dash-background {
-  background-color: #f3f3f3;
+  background-color: #fcfcfc;
 }
 
 #dashtodockContainer.transparent #dash .dash-background {
@@ -4604,7 +4613,7 @@ StWidget.focused .app-grid-running-dot {
 #dashtodockContainer:overview #dash .grid-search-result:selected .overview-icon,
 #dashtodockContainer:overview #dash .search-provider-icon:selected .overview-icon,
 #dashtodockContainer:overview #dash .list-search-result:selected .overview-icon {
-  background-color: rgba(255, 255, 255, 0.35) !important;
+  background-color: rgba(0, 0, 0, 0.07) !important;
   color: rgba(255, 255, 255, 0.85) !important;
 }
 
@@ -4617,7 +4626,7 @@ StWidget.focused .app-grid-running-dot {
 #dashtodockContainer:overview #dash .grid-search-result:checked .overview-icon,
 #dashtodockContainer:overview #dash .search-provider-icon:checked .overview-icon,
 #dashtodockContainer:overview #dash .list-search-result:checked .overview-icon {
-  background-color: rgba(255, 255, 255, 0.35) !important;
+  background-color: rgba(0, 0, 0, 0.07) !important;
   color: rgba(255, 255, 255, 0.85) !important;
 }
 
@@ -4715,19 +4724,34 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .dashtopanelMainPanel .show-apps:hover .overview-icon, .dashtopanelMainPanel .show-apps:focus .overview-icon, .dashtopanelMainPanel .show-apps:selected .overview-icon {
-  background-color: rgba(255, 255, 255, 0.35) !important;
+  background-color: rgba(0, 0, 0, 0.07) !important;
   color: rgba(0, 0, 0, 0.88) !important;
   box-shadow: none !important;
 }
 
 .dashtopanelMainPanel .show-apps:active .overview-icon, .dashtopanelMainPanel .show-apps:checked .overview-icon {
-  background-color: rgba(255, 255, 255, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.12) !important;
   color: rgba(0, 0, 0, 0.88) !important;
   box-shadow: none !important;
 }
 
 .dashtopanelMainPanel .panel-button {
   color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+.dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:hover, .dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:focus {
+  background-color: rgba(238, 238, 236, 0.1) !important;
+}
+
+.dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:active, .dashtopanelMainPanel#panel .arcmenu-panel-menu.panel-button:checked {
+  background-color: rgba(238, 238, 236, 0.18) !important;
 }
 
 .openweather-button, .openweather-button-action, .openweather-menu-button-container, .openweather-button-box {
@@ -4806,20 +4830,20 @@ StWidget.focused .app-grid-running-dot {
 #panel.light-panel .panel-button,
 #panel.dark-panel .panel-button,
 #panel.transparent-panel .panel-button {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(0, 0, 0, 0.75) !important;
 }
 
 #panel.light-panel .panel-button.clock-display .clock,
 #panel.dark-panel .panel-button.clock-display .clock,
 #panel.transparent-panel .panel-button.clock-display .clock {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(0, 0, 0, 0.75) !important;
 }
 
 #panel.light-panel .panel-button:hover,
 #panel.dark-panel .panel-button:hover,
 #panel.transparent-panel .panel-button:hover {
-  color: rgba(255, 255, 255, 0.7) !important;
-  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: rgba(0, 0, 0, 0.75) !important;
+  background-color: rgba(0, 0, 0, 0.07) !important;
 }
 
 #panel.light-panel .panel-button:active, #panel.light-panel .panel-button:checked, #panel.light-panel .panel-button:focus,
@@ -4829,8 +4853,8 @@ StWidget.focused .app-grid-running-dot {
 #panel.transparent-panel .panel-button:active,
 #panel.transparent-panel .panel-button:checked,
 #panel.transparent-panel .panel-button:focus {
-  color: rgba(255, 255, 255, 0.85) !important;
-  background-color: rgba(255, 255, 255, 0.3) !important;
+  color: rgba(0, 0, 0, 0.88) !important;
+  background-color: rgba(0, 0, 0, 0.12) !important;
 }
 
 #panel.light-panel .panel-button:hover.clock-display .clock, #panel.light-panel .panel-button:active.clock-display .clock, #panel.light-panel .panel-button:overview.clock-display .clock, #panel.light-panel .panel-button:focus.clock-display .clock, #panel.light-panel .panel-button:checked.clock-display .clock,
